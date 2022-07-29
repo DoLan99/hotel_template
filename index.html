@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>ThanhTung - Hotel booking</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Favicons-->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+	<link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+		href="img/apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+		href="img/apple-touch-icon-144x144-precomposed.png">
+
+	<!-- CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/jquery-ui-1.10.1.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/fontello.css" rel="stylesheet">
+	<link href="css/animation.css" rel="stylesheet">
+	<link href="css/weather.css" rel="stylesheet">
+
+	<!-- Owl Carousel Assets -->
+	<link href="css/owl.carousel.css" rel="stylesheet">
+	<link href="css/owl.theme.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+      <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-11097556-8']);
+		_gaq.push(['_trackPageview']);
+
+		(function () {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	<style>
+		.card {
+			box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+			border: none;
+			margin-bottom: 30px;
+			background-color: #fff;
+		}
+
+		.card:hover {
+			transform: scale(1.05);
+			transition: all 1s ease;
+			z-index: 999;
+		}
+
+		.card-body {
+			padding: 20px 10px;
+		}
+
+		.card-01 .card-body {
+			position: relative;
+			padding-top: 40px;
+		}
+
+		.card-01 .height-fix {
+			height: 455px;
+			overflow: hidden;
+		}
+
+		.profile-box {
+			background-size: cover;
+			float: left;
+			width: 100%;
+			text-align: center;
+			padding: 30px 0;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.profile-box:before {
+			filter: blur(10px);
+			background: url("https://images.pexels.com/photos/195825/pexels-photo-195825.jpeg?h=350&auto=compress&cs=tinysrgb") no-repeat;
+			background-size: cover;
+			width: 120%;
+			position: absolute;
+			content: "";
+			height: 120%;
+			left: -10%;
+			top: 0;
+			z-index: 0;
+		}
+
+		.profile-box img {
+			width: 170px;
+			height: 170px;
+			position: relative;
+			border: 5px solid #fff;
+		}
+
+		.video-foreground {
+			float: left;
+			width: 100%;
+			height: 500px;
+		}
+
+		.card-01.height-fix .card-img-overlay {
+			top: unset;
+			color: #fff;
+			background: -moz-linear-gradient(top, rgba(26, 96, 111, 0) 0%, rgba(26, 96, 111, 0) 1%, rgba(24, 87, 104, 0.91) 31%, rgba(21, 65, 89, 0.91) 100%);
+			/* FF3.6-15 */
+			background: -webkit-linear-gradient(top, rgba(26, 96, 111, 0) 0%, rgba(26, 96, 111, 0) 1%, rgba(24, 87, 104, 0.91) 31%, rgba(21, 65, 89, 0.91) 100%);
+			/* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, rgba(26, 96, 111, 0) 0%, rgba(26, 96, 111, 0) 1%, rgba(24, 87, 104, 0.91) 31%, rgba(21, 65, 89, 0.91) 100%);
+			/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#001a606f', endColorstr='#e8154159', GradientType=0);
+		}
+
+		.card-01.height-fix .fa {
+			color: #fff;
+			font-size: 22px;
+			margin-right: 18px;
+		}
+
+		.img_card {
+			height: 150px;
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div id="status"><img src="img/logo.png" alt></div>
+	</div>
+	<!--  end Preloader -->
+
+	<div id="wrapper">
+		<div id="main">
+			<div class="container">
+				<div id="logo"><img src="img/logo.png" alt></div>
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Welcome to ThanhTung</h1>
+						<h2>Cousy and affordable accomodation <strong>in a nice contest</strong>.</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="card card-01">
+							<div class="embed-responsive embed-responsive-16by9">
+								<img src="img/room1.jpg" class="img_card" />
+							</div>
+							<div class="card-body">
+								<h4 class="card-title">Giường 1</h4>
+								<p class="card-text">Some quick example text to build on the card title and make up the
+									bulk of the card's content.</p>
+								<div style="display: flex;">
+									<a href="#" class="btn btn-default text-uppercase btn btn-success"
+										style="margin-right: 10px;" id="modal-about-open">Chi
+										tiết</a>
+									<a href="#" id="modal-rooms-open"
+										class="btn btn-default text-uppercase btn btn-danger">Đặt
+										giường</a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card card-01">
+							<div class="embed-responsive embed-responsive-16by9">
+								<img src="img/room1.jpg" class="img_card" />
+							</div>
+							<div class="card-body">
+								<h4 class="card-title">Giường 2</h4>
+								<p class="card-text">Some quick example text to build on the card title and make up the
+									bulk of the card's content.</p>
+								<div style="display: flex;">
+									<a href="#" class="btn btn-default text-uppercase btn btn-success"
+										style="margin-right: 10px;">Chi
+										tiết</a>
+									<a href="#" id="modal-rooms-open"
+										class="btn btn-default text-uppercase btn btn-danger">Đặt
+										giường</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card card-01">
+							<div class="embed-responsive embed-responsive-16by9">
+								<img src="img/room1.jpg" class="img_card" />
+							</div>
+							<div class="card-body">
+								<h4 class="card-title">Giường 3</h4>
+								<p class="card-text">Some quick example text to build on the card title and make up the
+									bulk of the card's content.</p>
+								<div style="display: flex;">
+									<a href="#" class="btn btn-default text-uppercase btn btn-success"
+										style="margin-right: 10px;">Chi
+										tiết</a>
+									<a href="#" id="modal-rooms-open"
+										class="btn btn-default text-uppercase btn btn-danger">Đặt
+										giường</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card card-01">
+							<div class="embed-responsive embed-responsive-16by9">
+								<img src="img/room1.jpg" class="img_card" />
+							</div>
+							<div class="card-body">
+								<h4 class="card-title">Giường 4</h4>
+								<p class="card-text">Some quick example text to build on the card title and make up the
+									bulk of the card's content.</p>
+								<div style="display: flex;">
+									<a href="#" class="btn btn-default text-uppercase btn btn-success"
+										style="margin-right: 10px;">Chi
+										tiết</a>
+									<a href="#" id="modal-rooms-open"
+										class="btn btn-default text-uppercase btn btn-danger">Đặt
+										giường</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card card-01">
+							<div class="embed-responsive embed-responsive-16by9">
+								<img src="img/room1.jpg" class="img_card" />
+							</div>
+							<div class="card-body">
+								<h4 class="card-title">Giường 5</h4>
+								<p class="card-text">Some quick example text to build on the card title and make up the
+									bulk of the card's content.</p>
+								<div style="display: flex;">
+									<a href="#" class="btn btn-default text-uppercase btn btn-success"
+										style="margin-right: 10px;">Chi
+										tiết</a>
+									<a href="#" id="modal-rooms-open"
+										class="btn btn-default text-uppercase btn btn-danger">Đặt
+										giường</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card card-01">
+							<div class="embed-responsive embed-responsive-16by9">
+								<img src="img/room1.jpg" class="img_card" />
+							</div>
+							<div class="card-body">
+								<h4 class="card-title">Giường 6</h4>
+								<p class="card-text">Some quick example text to build on the card title and make up the
+									bulk of the card's content.</p>
+								<div style="display: flex;">
+									<a href="#" class="btn btn-default text-uppercase btn btn-success"
+										style="margin-right: 10px;">Chi
+										tiết</a>
+									<a href="#" id="modal-rooms-open"
+										class="btn btn-default text-uppercase btn btn-danger">Đặt
+										giường</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card card-01">
+							<div class="embed-responsive embed-responsive-16by9">
+								<img src="img/room1.jpg" class="img_card" />
+							</div>
+							<div class="card-body">
+								<h4 class="card-title">Giường 7</h4>
+								<p class="card-text">Some quick example text to build on the card title and make up the
+									bulk of the card's content.</p>
+								<div style="display: flex;">
+									<a href="#" class="btn btn-default text-uppercase btn btn-success"
+										style="margin-right: 10px;">Chi
+										tiết</a>
+									<a href="#" id="modal-rooms-open"
+										class="btn btn-default text-uppercase btn btn-danger">Đặt
+										giường</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card card-01">
+							<div class="embed-responsive embed-responsive-16by9">
+								<img src="img/room1.jpg" class="img_card" />
+							</div>
+							<div class="card-body">
+								<h4 class="card-title">Giường 8</h4>
+								<p class="card-text">Some quick example text to build on the card title and make up the
+									bulk of the card's content.</p>
+								<div style="display: flex;">
+									<a href="#" class="btn btn-default text-uppercase btn btn-success"
+										style="margin-right: 10px;">Chi
+										tiết</a>
+									<a href="#" id="modal-rooms-open"
+										class="btn btn-default text-uppercase btn btn-danger">Đặt
+										giường</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal-offers">
+			<a href="#" class="modal-close"><i class=" icon-cancel-circled-outline"></i></a>
+			<div class="container" style="padding-top: 100px;">
+				<form autocomplete="off" class="form" role="form">
+					<div class="row">
+						<div class="col-md-6 ">
+							<div class="form-group">
+								<label for="inputName">Họ tên</label>
+								<input class="form-control" id="inputName" placeholder="Họ tên" type="text">
+							</div>
+						</div>
+
+						<div class="col-md-6 ">
+							<div class="form-group">
+								<label for="inputEmail3">Số điện thoại</label>
+								<input class="form-control" id="inputEmail3" placeholder="Số điện thoại" required=""
+									type="number">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 ">
+							<div class="form-group">
+								<label for="inputEmail3">Số CMND</label>
+								<input class="form-control" id="inputEmail3" placeholder="Nhập số chứng minh nhân dân"
+									required="" type="number">
+							</div>
+						</div>
+						<div class="col-md-6 ">
+							<div class="form-group">
+								<label for="inputEmail3">Ảnh CMND 2 mặt</label>
+								<input class="form-control" id="inputEmail3" placeholder="Nhập số chứng minh nhân dân"
+									required="" multiple type="file">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 ">
+							<label for="inputEmail3">Các khung giờ đang trống</label>
+							<div class="form-group form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+									value="option1">
+								<label class="form-check-label" for="inlineRadio1">10h-12h</label>
+							</div>
+							<div class="form-group form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+									value="option2">
+								<label class="form-check-label" for="inlineRadio2">12h-23h</label>
+							</div>
+						</div>
+						<div class="col-md-6 ">
+							<div class="form-group">
+								<label for="inputEmail3">Khung giờ và ngày tự chọn</label>
+								<input class="form-control" id="datetime" name="datetimes" required="" type="text">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 ">
+							<div class="form-group">
+								<button class="btn btn-success btn-lg float-right" type="submit">Đặt giường</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div id="modal-about">
+		<a href="#" class="modal-close"><i class=" icon-cancel-circled-outline"></i></a>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 ">
+					<h3>Our rooms</h3>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="photo_polaroid">
+								<div class="carousel">
+									<div class="item"><img src="img/room_1.jpg" alt class="img-responsive"></div>
+									<div class="item"><img src="img/room_1b.jpg" alt class="img-responsive"></div>
+									<div class="item"><img src="img/room_1c.jpg" alt class="img-responsive"></div>
+								</div><!-- End carousel -->
+							</div>
+						</div>
+						<div class="col-md-6">
+							<h4>Single room <strong>110$</strong><span> Pellentesque amet adipiscing
+									scelerisque</span></h4>
+							<p class="text-center">
+								Lorem ipsum dolor sit amet, pellentesque amet adipiscing scelerisque, vitae urna
+								aenean, justo malesuada at eu, orci varius risus luctus enim a malesuada. Erat in
+								tempor magna, eget porttitor posuere.
+							</p>
+							<ul class="rooms_info">
+								<li><i class="icon-lodging"></i>Single bed</li>
+								<li><i class="icon-wifi"></i>Wifi</li>
+								<li><i class="icon-air"></i>Air condition</li>
+							</ul>
+							<p><a href="#" id="modal-rooms-open" class="modal-close booking">Đặt giường</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	<div id="slides">
+		<ul class="slides-container">
+			<li><img src="img/slide_1.jpg" alt></li>
+			<li><img src="img/slide_2.jpg" alt></li>
+			<li><img src="img/slide_3.jpg" alt></li>
+			<li><img src="img/slide_4.jpg" alt></li>
+		</ul>
+	</div><!-- End background slider -->
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+	<script src="https://unpkg.com/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- <script src="js/calendar_func.js"></script> -->
+	<script src="js/jquery-ui-1.10.1.min.js"></script>
+	<script src="js/jquery.easing.1.3.min.js"></script>
+	<script src="js/jquery.superslides.min.js"></script>
+	<script type="text/javascript">
+		$('#slides').superslides({
+			play: 6000,
+			pagination: false,
+			animation_speed: 800,
+			animation: 'fade'
+		});
+		$('input[name="datetimes"]').daterangepicker({
+			timePicker: true,
+			startDate: moment().startOf('hour'),
+			endDate: moment().startOf('hour').add(32, 'hour'),
+			locale: {
+				format: 'M/DD hh:mm A'
+			}
+		});
+	</script>
+
+	<script src="js/jquery.placeholder.min.js"></script>
+	<script src="js/functions.js"></script>
+	<script src="js/validate.js"></script>
+
+	<!-- CAROUSEL -->
+	<script src="js/owl.carousel.min.js"></script>
+	<script>
+		//Carousel
+		$(document).ready(function () {
+			"use strict";
+			//Carousel
+			$(".carousel").owlCarousel({
+				items: 1,
+				singleItem: true,
+				responsive: true,
+				autoHeight: true,
+				transitionStyle: "fade"
+			});
+		});
+	</script>
+</body>
+
+</html>
