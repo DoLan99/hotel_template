@@ -250,6 +250,7 @@ a[data-goto]:hover {
 
 .fc-row:first-child table {
   border-top: 0 hidden transparent;
+  color: #fff;
   /* no top border on first row */ }
 
 /* Day Row (used within the header and the DayGrid)
@@ -300,6 +301,7 @@ temporary rendered events).
   /* see-through to the background below */
   /* extra precedence to prevent theme-provided backgrounds */
   background: none;
+  color: #fff;
   /* in case <td>s are globally styled */
   border-color: transparent; }
 
@@ -897,7 +899,8 @@ NOTE: use percentage font sizes or else old IE chokes
   /* column headers can't have as much v space */ }
 
 .fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
-  float: right; }
+  float: right; 
+}
 
 .fc-rtl .fc-basic-view .fc-day-top .fc-day-number {
   float: left; }

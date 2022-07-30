@@ -14,6 +14,9 @@
 		href="img/apple-touch-icon-114x114-precomposed.png">
 	<link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
 		href="img/apple-touch-icon-144x144-precomposed.png">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/icon-font.min.css" />
 
 	<!-- CSS -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -73,21 +76,20 @@
 		<div id="modal-offers">
 			<a href="#" class="modal-close" data-dismiss="modal"><i class=" icon-cancel-circled-outline"></i></a>
 			<div class="container" style="padding-top: 100px;">
-				<h1 id="id_khunggio" style="color: black;padding-bottom: 10px;">06:00 - 07:00</h1>
-				<form autocomplete="off" class="form" role="form">
+				<h1 id="id_khunggio" style="color: black;padding-bottom: 10px;">Thông tin đặt phòng</h1>
+				<form action="javascript:void(0)" class="form" role="form">
 					<div class="row">
 						<div class="col-md-6 ">
 							<div class="form-group">
 								<label for="inputName">Họ tên</label>
-								<input class="form-control" id="inputName" placeholder="Họ tên" type="text">
+								<input class="form-control" id="inputName" placeholder="Họ tên" type="text" required>
 							</div>
 						</div>
 
 						<div class="col-md-6 ">
 							<div class="form-group">
 								<label for="inputEmail3">Số điện thoại</label>
-								<input class="form-control" id="inputEmail3" placeholder="Số điện thoại" required=""
-									type="number">
+								<input class="form-control" id="inputEmail3" placeholder="Số điện thoại" type="number" >
 							</div>
 						</div>
 					</div>
@@ -137,7 +139,8 @@
 					<div class="row">
 						<div class="col-md-12 ">
 							<div class="form-group">
-								<button class="btn btn-success btn-lg float-right" type="submit">Đặt giường</button>
+								<button class="btn btn-success btn-lg float-right" onclick="dat_giuong()"
+									type="submit">Đặt giường</button>
 							</div>
 						</div>
 					</div>
@@ -164,6 +167,7 @@
 	<script src="js/jquery-ui-1.10.1.min.js"></script>
 	<script src="js/jquery.easing.1.3.min.js"></script>
 	<script src="js/jquery.superslides.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script type="text/javascript">
 		$('#slides').superslides({
 			play: 6000,
@@ -179,6 +183,20 @@
 				format: 'M/DD hh:mm A'
 			}
 		});
+		function dat_giuong() {
+			Swal.fire({
+				title: '<strong>Đặt giường thành công!</strong>',
+				icon: 'success',
+				html:
+					'Yêu cầu khách chuyển tiền trong vòng 48 giờ Vào tài khoản' +
+					'01919764502 ngân hàng: TpBank THANH TUNG' +
+					'và mã đặt chỗ: DC0101',
+				showCancelButton: true,
+				confirmButtonColor: '#3085d6',
+				cancelButtonColor: '#d33',
+				confirmButtonText: 'OK!'
+			})
+		}
 		jQuery('.datetimepicker').datepicker({
 			timepicker: true,
 			language: 'en',
@@ -197,29 +215,27 @@
 					themeSystem: 'bootstrap4',
 					// emphasizes business hours
 					businessHours: false,
-					defaultView: 'agendaDay',
+					defaultView: 'month',
 					// event dragging & resizing
 					editable: true,
 					// header
 					header: {
 						left: 'title',
 						// center: 'month,agendaWeek,agendaDay',
-						// right: 'today prev,next'
+						right: 'today prev,next'
 					},
 					events: [
 						{
 							title: '2 phòng trống',
 							description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
-							start: '2022-07-30T06:00:00',
-							end: '2022-07-30T07:00:00',
+							start: '2022-07-30',
 							className: 'fc-bg-default',
 							icon: "circle"
 						},
 						{
 							title: '1 phòng trống',
 							description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
-							start: '2022-07-30T14:00:00',
-							end: '2022-07-30T15:00:00',
+							start: '2022-07-31',
 							className: 'fc-bg-deepskyblue',
 							icon: "cog",
 							allDay: false
@@ -227,8 +243,7 @@
 						{
 							title: '8 phòng trống',
 							description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
-							start: '2022-07-30T07:00:00',
-							end: '2022-07-30T08:00:00',
+							start: '2022-08-01',
 							className: 'fc-bg-pinkred',
 							icon: "group",
 							allDay: false
