@@ -22,15 +22,10 @@
 	<link href="css/fontello.css" rel="stylesheet">
 	<link href="css/animation.css" rel="stylesheet">
 	<link href="css/weather.css" rel="stylesheet">
-
+	<link rel="stylesheet" type="text/css" href="css/fullcalendar.css" />
 	<!-- Owl Carousel Assets -->
 	<link href="css/owl.carousel.css" rel="stylesheet">
 	<link href="css/owl.theme.css" rel="stylesheet">
-
-	<!--[if lt IE 9]>
-      <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="http://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-11097556-8']);
@@ -43,90 +38,8 @@
 		})();
 	</script>
 	<style>
-		.card {
-			margin-bottom: 30px;
-			background-color: #fff;
-			border: 2px solid black;
-    		box-shadow: 3px 3px 3px #383737;
-		}
-
-		.card:hover {
-			transform: scale(1.05);
-			transition: all 1s ease;
-			z-index: 999;
-		}
-
-		.card-body {
-			padding: 20px 10px;
-		}
-
-		.card-01 .card-body {
-			position: relative;
-			padding-top: 40px;
-		}
-
-		.card-01 .height-fix {
-			height: 455px;
-			overflow: hidden;
-		}
-
-		.profile-box {
-			background-size: cover;
-			float: left;
-			width: 100%;
-			text-align: center;
-			padding: 30px 0;
-			position: relative;
-			overflow: hidden;
-		}
-
-		.profile-box:before {
-			filter: blur(10px);
-			background: url("https://images.pexels.com/photos/195825/pexels-photo-195825.jpeg?h=350&auto=compress&cs=tinysrgb") no-repeat;
-			background-size: cover;
-			width: 120%;
-			position: absolute;
-			content: "";
-			height: 120%;
-			left: -10%;
-			top: 0;
-			z-index: 0;
-		}
-
-		.profile-box img {
-			width: 170px;
-			height: 170px;
-			position: relative;
-			border: 5px solid #fff;
-		}
-
-		.video-foreground {
-			float: left;
-			width: 100%;
-			height: 500px;
-		}
-
-		.card-01.height-fix .card-img-overlay {
-			top: unset;
-			color: #fff;
-			background: -moz-linear-gradient(top, rgba(26, 96, 111, 0) 0%, rgba(26, 96, 111, 0) 1%, rgba(24, 87, 104, 0.91) 31%, rgba(21, 65, 89, 0.91) 100%);
-			/* FF3.6-15 */
-			background: -webkit-linear-gradient(top, rgba(26, 96, 111, 0) 0%, rgba(26, 96, 111, 0) 1%, rgba(24, 87, 104, 0.91) 31%, rgba(21, 65, 89, 0.91) 100%);
-			/* Chrome10-25,Safari5.1-6 */
-			background: linear-gradient(to bottom, rgba(26, 96, 111, 0) 0%, rgba(26, 96, 111, 0) 1%, rgba(24, 87, 104, 0.91) 31%, rgba(21, 65, 89, 0.91) 100%);
-			/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#001a606f', endColorstr='#e8154159', GradientType=0);
-		}
-
-		.card-01.height-fix .fa {
-			color: #fff;
-			font-size: 22px;
-			margin-right: 18px;
-		}
-
-		.img_card {
-			height: 150px;
-			width: 100%;
+		.modal-backdrop {
+			position: relative !important;
 		}
 	</style>
 </head>
@@ -148,174 +61,19 @@
 						<h2>Cousy and affordable accomodation <strong>in a nice contest</strong>.</h2>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-3">
-						<div class="card card-01">
-							<div class="embed-responsive embed-responsive-16by9">
-								<img src="img/room1.jpg" class="img_card" />
-							</div>
-							<div class="card-body">
-								<h4 class="card-title">Giường 1</h4>
-								<p class="card-text">Some quick example text to build on the card title and make up the
-									bulk of the card's content.</p>
-								<div style="display: flex;">
-									<a href="#" class="btn btn-default text-uppercase btn btn-success"
-										style="margin-right: 10px;" id="modal-about-open">Chi
-										tiết</a>
-									<a href="#" id="modal-rooms-open"
-										class="btn btn-default text-uppercase btn btn-danger">Đặt
-										giường</a>
-								</div>
-
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="card card-01">
-							<div class="embed-responsive embed-responsive-16by9">
-								<img src="img/room1.jpg" class="img_card" />
-							</div>
-							<div class="card-body">
-								<h4 class="card-title">Giường 2</h4>
-								<p class="card-text">Some quick example text to build on the card title and make up the
-									bulk of the card's content.</p>
-								<div style="display: flex;">
-									<a href="#" class="btn btn-default text-uppercase btn btn-success"
-										style="margin-right: 10px;">Chi
-										tiết</a>
-									<a href="#" id="modal-rooms-open"
-										class="btn btn-default text-uppercase btn btn-danger">Đặt
-										giường</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="card card-01">
-							<div class="embed-responsive embed-responsive-16by9">
-								<img src="img/room1.jpg" class="img_card" />
-							</div>
-							<div class="card-body">
-								<h4 class="card-title">Giường 3</h4>
-								<p class="card-text">Some quick example text to build on the card title and make up the
-									bulk of the card's content.</p>
-								<div style="display: flex;">
-									<a href="#" class="btn btn-default text-uppercase btn btn-success"
-										style="margin-right: 10px;">Chi
-										tiết</a>
-									<a href="#" id="modal-rooms-open"
-										class="btn btn-default text-uppercase btn btn-danger">Đặt
-										giường</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="card card-01">
-							<div class="embed-responsive embed-responsive-16by9">
-								<img src="img/room1.jpg" class="img_card" />
-							</div>
-							<div class="card-body">
-								<h4 class="card-title">Giường 4</h4>
-								<p class="card-text">Some quick example text to build on the card title and make up the
-									bulk of the card's content.</p>
-								<div style="display: flex;">
-									<a href="#" class="btn btn-default text-uppercase btn btn-success"
-										style="margin-right: 10px;">Chi
-										tiết</a>
-									<a href="#" id="modal-rooms-open"
-										class="btn btn-default text-uppercase btn btn-danger">Đặt
-										giường</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="card card-01">
-							<div class="embed-responsive embed-responsive-16by9">
-								<img src="img/room1.jpg" class="img_card" />
-							</div>
-							<div class="card-body">
-								<h4 class="card-title">Giường 5</h4>
-								<p class="card-text">Some quick example text to build on the card title and make up the
-									bulk of the card's content.</p>
-								<div style="display: flex;">
-									<a href="#" class="btn btn-default text-uppercase btn btn-success"
-										style="margin-right: 10px;">Chi
-										tiết</a>
-									<a href="#" id="modal-rooms-open"
-										class="btn btn-default text-uppercase btn btn-danger">Đặt
-										giường</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="card card-01">
-							<div class="embed-responsive embed-responsive-16by9">
-								<img src="img/room1.jpg" class="img_card" />
-							</div>
-							<div class="card-body">
-								<h4 class="card-title">Giường 6</h4>
-								<p class="card-text">Some quick example text to build on the card title and make up the
-									bulk of the card's content.</p>
-								<div style="display: flex;">
-									<a href="#" class="btn btn-default text-uppercase btn btn-success"
-										style="margin-right: 10px;">Chi
-										tiết</a>
-									<a href="#" id="modal-rooms-open"
-										class="btn btn-default text-uppercase btn btn-danger">Đặt
-										giường</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="card card-01">
-							<div class="embed-responsive embed-responsive-16by9">
-								<img src="img/room1.jpg" class="img_card" />
-							</div>
-							<div class="card-body">
-								<h4 class="card-title">Giường 7</h4>
-								<p class="card-text">Some quick example text to build on the card title and make up the
-									bulk of the card's content.</p>
-								<div style="display: flex;">
-									<a href="#" class="btn btn-default text-uppercase btn btn-success"
-										style="margin-right: 10px;">Chi
-										tiết</a>
-									<a href="#" id="modal-rooms-open"
-										class="btn btn-default text-uppercase btn btn-danger">Đặt
-										giường</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="card card-01">
-							<div class="embed-responsive embed-responsive-16by9">
-								<img src="img/room1.jpg" class="img_card" />
-							</div>
-							<div class="card-body">
-								<h4 class="card-title">Giường 8</h4>
-								<p class="card-text">Some quick example text to build on the card title and make up the
-									bulk of the card's content.</p>
-								<div style="display: flex;">
-									<a href="#" class="btn btn-default text-uppercase btn btn-success"
-										style="margin-right: 10px;">Chi
-										tiết</a>
-									<a href="#" id="modal-rooms-open"
-										class="btn btn-default text-uppercase btn btn-danger">Đặt
-										giường</a>
-								</div>
-							</div>
+				<div id="book">
+					<div class="row" style="background-color: #0b0b0be6; border-radius: 5px;">
+						<div class="col-md-12">
+							<div id="calendar"></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div id="modal-offers">
-			<a href="#" class="modal-close"><i class=" icon-cancel-circled-outline"></i></a>
+			<a href="#" class="modal-close" data-dismiss="modal"><i class=" icon-cancel-circled-outline"></i></a>
 			<div class="container" style="padding-top: 100px;">
+				<h1 id="id_khunggio" style="color: black;padding-bottom: 10px;">06:00 - 07:00</h1>
 				<form autocomplete="off" class="form" role="form">
 					<div class="row">
 						<div class="col-md-6 ">
@@ -351,22 +109,28 @@
 					</div>
 					<div class="row">
 						<div class="col-md-6 ">
-							<label for="inputEmail3">Các khung giờ đang trống</label>
+							<label for="inputEmail3">Các giường đang trống</label>
 							<div class="form-group form-check form-check-inline">
 								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
 									value="option1">
-								<label class="form-check-label" for="inlineRadio1">10h-12h</label>
+								<label class="form-check-label" for="inlineRadio1">Giường 1</label>
 							</div>
 							<div class="form-group form-check form-check-inline">
 								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
 									value="option2">
-								<label class="form-check-label" for="inlineRadio2">12h-23h</label>
+								<label class="form-check-label" for="inlineRadio2">Giường 2</label>
 							</div>
 						</div>
 						<div class="col-md-6 ">
-							<div class="form-group">
-								<label for="inputEmail3">Khung giờ và ngày tự chọn</label>
-								<input class="form-control" id="datetime" name="datetimes" required="" type="text">
+							<div class="form-group form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+									value="option1">
+								<label class="form-check-label" for="inlineRadio1">Giường 3</label>
+							</div>
+							<div class="form-group form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
+									value="option2">
+								<label class="form-check-label" for="inlineRadio2">Giường 4</label>
 							</div>
 						</div>
 					</div>
@@ -380,44 +144,6 @@
 				</form>
 			</div>
 		</div>
-	</div>
-	</div>
-	<div id="modal-about">
-		<a href="#" class="modal-close"><i class=" icon-cancel-circled-outline"></i></a>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 ">
-					<h3>Our rooms</h3>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="photo_polaroid">
-								<div class="carousel">
-									<div class="item"><img src="img/room_1.jpg" alt class="img-responsive"></div>
-									<div class="item"><img src="img/room_1b.jpg" alt class="img-responsive"></div>
-									<div class="item"><img src="img/room_1c.jpg" alt class="img-responsive"></div>
-								</div><!-- End carousel -->
-							</div>
-						</div>
-						<div class="col-md-6">
-							<h4>Single room <strong>110$</strong><span> Pellentesque amet adipiscing
-									scelerisque</span></h4>
-							<p class="text-center">
-								Lorem ipsum dolor sit amet, pellentesque amet adipiscing scelerisque, vitae urna
-								aenean, justo malesuada at eu, orci varius risus luctus enim a malesuada. Erat in
-								tempor magna, eget porttitor posuere.
-							</p>
-							<ul class="rooms_info">
-								<li><i class="icon-lodging"></i>Single bed</li>
-								<li><i class="icon-wifi"></i>Wifi</li>
-								<li><i class="icon-air"></i>Air condition</li>
-							</ul>
-							<p><a href="#" id="modal-rooms-open" class="modal-close booking">Đặt giường</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 	</div>
 	</div>
 	<div id="slides">
@@ -434,7 +160,7 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 	<script src="https://unpkg.com/popper.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<!-- <script src="js/calendar_func.js"></script> -->
+	<script src="js/fullcalendar.min.js"></script>
 	<script src="js/jquery-ui-1.10.1.min.js"></script>
 	<script src="js/jquery.easing.1.3.min.js"></script>
 	<script src="js/jquery.superslides.min.js"></script>
@@ -453,6 +179,153 @@
 				format: 'M/DD hh:mm A'
 			}
 		});
+		jQuery('.datetimepicker').datepicker({
+			timepicker: true,
+			language: 'en',
+			range: true,
+			multipleDates: true,
+			multipleDatesSeparator: " - "
+		});
+		(function () {
+			'use strict';
+			// ------------------------------------------------------- //
+			// Calendar
+			// ------------------------------------------------------ //
+			jQuery(function () {
+				// page is ready
+				jQuery('#calendar').fullCalendar({
+					themeSystem: 'bootstrap4',
+					// emphasizes business hours
+					businessHours: false,
+					defaultView: 'agendaDay',
+					// event dragging & resizing
+					editable: true,
+					// header
+					header: {
+						left: 'title',
+						// center: 'month,agendaWeek,agendaDay',
+						// right: 'today prev,next'
+					},
+					events: [
+						{
+							title: '2 phòng trống',
+							description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+							start: '2022-07-30T06:00:00',
+							end: '2022-07-30T07:00:00',
+							className: 'fc-bg-default',
+							icon: "circle"
+						},
+						{
+							title: '1 phòng trống',
+							description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+							start: '2022-07-30T14:00:00',
+							end: '2022-07-30T15:00:00',
+							className: 'fc-bg-deepskyblue',
+							icon: "cog",
+							allDay: false
+						},
+						{
+							title: '8 phòng trống',
+							description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+							start: '2022-07-30T07:00:00',
+							end: '2022-07-30T08:00:00',
+							className: 'fc-bg-pinkred',
+							icon: "group",
+							allDay: false
+						},
+						{
+							title: 'Meeting',
+							description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+							start: '2020-08-12',
+							className: 'fc-bg-lightgreen',
+							icon: "suitcase"
+						},
+						{
+							title: 'Conference',
+							description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+							start: '2020-08-13',
+							end: '2020-08-15',
+							className: 'fc-bg-blue',
+							icon: "calendar"
+						},
+						{
+							title: 'Baby Shower',
+							description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+							start: '2020-08-13',
+							end: '2020-08-14',
+							className: 'fc-bg-default',
+							icon: "child"
+						},
+						{
+							title: 'Birthday',
+							description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+							start: '2020-09-13',
+							end: '2020-09-14',
+							className: 'fc-bg-default',
+							icon: "birthday-cake"
+						},
+						{
+							title: 'Restaurant',
+							description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+							start: '2020-10-15T09:30:00',
+							end: '2020-10-15T11:45:00',
+							className: 'fc-bg-default',
+							icon: "glass",
+							allDay: false
+						},
+						{
+							title: 'Dinner',
+							description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+							start: '2020-11-15T20:00:00',
+							end: '2020-11-15T22:30:00',
+							className: 'fc-bg-default',
+							icon: "cutlery",
+							allDay: false
+						},
+						{
+							title: 'Shooting',
+							description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+							start: '2020-08-25',
+							end: '2020-08-25',
+							className: 'fc-bg-blue',
+							icon: "camera"
+						},
+						{
+							title: 'Go Space :)',
+							description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+							start: '2020-12-27',
+							end: '2020-12-27',
+							className: 'fc-bg-default',
+							icon: "rocket"
+						},
+						{
+							title: 'Dentist',
+							description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.',
+							start: '2020-12-29T11:30:00',
+							end: '2020-12-29T012:30:00',
+							className: 'fc-bg-blue',
+							icon: "medkit",
+							allDay: false
+						}
+					],
+					eventRender: function (event, element) {
+						if (event.icon) {
+							element.find(".fc-title").prepend("<i class='fa fa-" + event.icon + "'></i>");
+						}
+					},
+					dayClick: function () {
+						jQuery('#modal-view-event-add').modal();
+					},
+					eventClick: function (event, jsEvent, view) {
+						jQuery('.event-icon').html("<i class='fa fa-" + event.icon + "'></i>");
+						jQuery('.event-body').html(event.description);
+						jQuery('.eventUrl').attr('href', event.url);
+						jQuery('#modal-offers').modal();
+					},
+				})
+			});
+
+		})(jQuery);
 	</script>
 
 	<script src="js/jquery.placeholder.min.js"></script>
